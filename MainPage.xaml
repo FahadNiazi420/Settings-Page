@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EditPages.MainPage" Title="">
+
+    <ScrollView BackgroundColor="#F5F4F9">
+        <VerticalStackLayout>
+            <!--Line 01-->
+            <Grid HorizontalOptions="FillAndExpand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <ImageButton Source="back.png"  MaximumWidthRequest="40" MaximumHeightRequest="40" HorizontalOptions="Start" Grid.Column="0" BackgroundColor="Transparent"/>
+                <Label Text="Settings" TextColor="Blue" FontSize="Large" 
+                       HorizontalOptions="Center" Grid.Column="1"  FontAttributes="Bold"/>
+            </Grid>
+
+            <!--Line 02-->
+            <HorizontalStackLayout HorizontalOptions="Center" Spacing="8">
+                <ImageButton Source="user2.png" WidthRequest="100" HeightRequest="100" CornerRadius="50"/>
+                <VerticalStackLayout Spacing="4">
+                    <Label Text="Shakeel Ahmed" FontSize="Large" TextColor="Blue" FontAttributes="Bold"/>
+                    <Label Text="shakeelahmed@gmail.com" FontSize="Small" TextColor="Gray"/>
+                    <Button Text="Edit Profile" Clicked="OnEditProfileClickedAsync" BackgroundColor="Blue" CornerRadius="20"  HorizontalOptions="Start" FontSize="13" HeightRequest="37" TextColor="White"/>
+                </VerticalStackLayout>
+            </HorizontalStackLayout>
+
+            <!--Line 03: Options Frame-->
+            <Frame Margin="15,20,15,0">
+                <VerticalStackLayout Spacing="9">
+                    <HorizontalStackLayout Spacing="9">
+                        <Image Source="options.png" WidthRequest="25" HeightRequest="25"/>
+                        <Label Text="Options" FontAttributes="Bold" TextColor="Black" FontSize="Medium"/>
+                    </HorizontalStackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Notifications" TextColor="Black" HorizontalOptions="StartAndExpand" VerticalOptions="Center" />
+                        <Switch IsToggled="false" HeightRequest="9" WidthRequest="50" HorizontalOptions="EndAndExpand" VerticalOptions="Center" OnColor="LightBlue" ThumbColor="Blue"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Offline Reading" TextColor="Black" HorizontalOptions="StartAndExpand" VerticalOptions="Center" />
+                        <Switch IsToggled="false" HeightRequest="9" WidthRequest="50" HorizontalOptions="EndAndExpand" VerticalOptions="Center" OnColor="LightBlue" ThumbColor="Blue"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Theme Mode" TextColor="Black" HorizontalOptions="StartAndExpand" VerticalOptions="Center" />
+                        <Label Text="Light Mode" HorizontalOptions="EndAndExpand" FontSize="Small" TextColor="Gray"/>
+                    </StackLayout>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!--Line 04: Account Frame-->
+            <Frame Margin="15,10,15,0">
+                <VerticalStackLayout Spacing="9">
+                    <HorizontalStackLayout Spacing="9">
+                        <Image Source="account.png" WidthRequest="25" HeightRequest="25"/>
+                        <Label Text="Account" FontAttributes="Bold" TextColor="Black" FontSize="Medium"/>
+                    </HorizontalStackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Country" TextColor="Black" HorizontalOptions="StartAndExpand" VerticalOptions="Center" />
+                        <Label Text="Nigeria" HorizontalOptions="EndAndExpand" FontSize="Small" TextColor="Gray"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="State" TextColor="Black" HorizontalOptions="StartAndExpand" VerticalOptions="Center" />
+                        <Label Text="Cross River" HorizontalOptions="EndAndExpand" FontSize="Small" TextColor="Gray"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Phone Number" TextColor="Black" HorizontalOptions="StartAndExpand" VerticalOptions="Center" />
+                        <Label Text="(+234) 8160879345" HorizontalOptions="EndAndExpand" FontSize="Small" TextColor="Gray"/>
+                    </StackLayout>
+                </VerticalStackLayout>
+            </Frame>
+
+
+            <!--Line 05: General Frame-->
+            <Frame Margin="15,10,15,0">
+                <VerticalStackLayout Spacing="9">
+                    <HorizontalStackLayout Spacing="9">
+                        <Image Source="general.png" WidthRequest="25" HeightRequest="25"/>
+                        <Label Text="General" FontAttributes="Bold" TextColor="Black" FontSize="Medium"/>
+                    </HorizontalStackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Display" TextColor="Black" HorizontalOptions="StartAndExpand" VerticalOptions="Center" />
+                        <ImageButton Source="forward.png" HeightRequest="17" WidthRequest="17" HorizontalOptions="EndAndExpand" VerticalOptions="Center"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Touch Setting" TextColor="Black" HorizontalOptions="StartAndExpand" VerticalOptions="Center" />
+                        <ImageButton Source="forward.png" HeightRequest="17" WidthRequest="17" HorizontalOptions="EndAndExpand" VerticalOptions="Center"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Finger Print Activation" TextColor="Black" HorizontalOptions="StartAndExpand" VerticalOptions="Center" />
+                        <Switch IsToggled="false" HeightRequest="9" WidthRequest="50" HorizontalOptions="EndAndExpand" VerticalOptions="Center" OnColor="LightBlue" ThumbColor="Blue"/>
+                    </StackLayout>
+                </VerticalStackLayout>
+            </Frame>
+
+
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+
+
+</ContentPage>

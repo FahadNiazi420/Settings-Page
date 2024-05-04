@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EditPages.EditProfile">
+    <ScrollView BackgroundColor="#F5F4F9">
+        <VerticalStackLayout BackgroundColor="#6348B1">
+            <!--Line 01 Back Button-->
+            <ImageButton Source="whiteback.png" MaximumWidthRequest="40" MaximumHeightRequest="40" HorizontalOptions="Start" Grid.Column="0" BackgroundColor="Transparent" Clicked="OnBackButtonClicked"/>
+
+            <!--Line 02 Edit Profile-->
+            <HorizontalStackLayout HorizontalOptions="FillAndExpand" Spacing="110" Margin="0,0,0,10">
+                <Label Text="Edit Profile" FontSize="Large" TextColor="White" FontAttributes="Bold"
+           HorizontalOptions="StartAndExpand" VerticalOptions="Center" Margin="15,0"/>
+                <ImageButton x:Name="ProfileImageButton" Clicked="OnProfileImageButtonClicked" Source="user2.png" WidthRequest="80" HeightRequest="80" CornerRadius="40"
+                 HorizontalOptions="EndAndExpand" VerticalOptions="Center"/>
+            </HorizontalStackLayout>
+            
+            <!--Line 03 FrAME-->
+            <Frame CornerRadius="25" Padding="0,0">
+                <VerticalStackLayout Spacing="15" >
+
+                    <Label Text="Account Information" FontSize="Large" TextColor="Blue" FontAttributes="Bold"
+                    HorizontalOptions="StartAndExpand" VerticalOptions="Center" Margin="20,20,20,0"/>
+                    <Frame CornerRadius="10" Padding="4" Margin="20,0">
+                        <Entry Placeholder="Full Name" TextColor="Black" FontSize="Medium"
+                        HorizontalOptions="FillAndExpand" VerticalOptions="Center" />
+                    </Frame>
+
+                    <Frame CornerRadius="10" Padding="4" Margin="20,0">
+                        <Entry Placeholder="Email Address" TextColor="Black" FontSize="Medium"
+    HorizontalOptions="FillAndExpand" VerticalOptions="Center" />
+                    </Frame>
+
+                    <Frame CornerRadius="10" Padding="4" Margin="20,0">
+                        <Entry Placeholder="Phone Number" TextColor="Black" FontSize="Medium"
+    HorizontalOptions="FillAndExpand" VerticalOptions="Center" />
+                    </Frame>
+
+                    <Frame CornerRadius="10" Padding="4" Margin="20,0">
+                        <Picker x:Name="myStatePicker" Title="State" TitleColor="LightGray" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" FontSize="Medium" TextColor="Black">
+                            <Picker.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                    <x:String>Cross River State</x:String>
+                                    <x:String>Adamawa</x:String>
+                                    <x:String>Akwa Ibom</x:String>
+                                </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker>
+                    </Frame>
+
+                    <Frame CornerRadius="10" Padding="4" Margin="20,0">
+                        <Picker x:Name="myCountryPicker" Title="Country Visited" TitleColor="LightGray" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" FontSize="Medium" TextColor="Black">
+                            <Picker.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                    <x:String>Cross River State</x:String>
+                                    <x:String>Adamawa</x:String>
+                                    <x:String>Akwa Ibom</x:String>
+                                </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker>
+                    </Frame>
+
+                    <Frame CornerRadius="10" Padding="4" Margin="20,0">
+                        <Editor HeightRequest="70" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" Placeholder="Brief Personal Description" FontSize="Medium"/>
+                    </Frame>
+
+                    <Frame BackgroundColor="#6348B1" Margin="0,0" Padding="0" HorizontalOptions="FillAndExpand" HeightRequest="60" CornerRadius="25" BorderColor="#6348B1">
+                        <Button Text="Edit Profile" FontSize="Medium" FontAttributes="Bold" BackgroundColor="Transparent" Clicked="OnEditProfileClickedAsync"/>
+                    </Frame>
+
+
+
+
+                </VerticalStackLayout>
+            </Frame>
+
+            
+
+
+
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
